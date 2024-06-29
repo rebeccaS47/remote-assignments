@@ -64,17 +64,20 @@ console.log(discountedPrice) // show the total price of all products after apply
 
 //5: Algorithm
 function twoSum(nums, target) {
-    //let result = {};
+    let result = [];
     for(let i=0; i<nums.length-1; i++){
         let findnum = target-nums[i];
         for(let j=i+1; j<nums.length; j++){
             if(findnum === nums[j]){
-                return ([i, j]);
-                //add result
+                result.push([i,j]);
             }
         }
     }
-    return `can't find any two sum equal target`;
+    if(result.length !== 0){
+        return result;
+    }else{
+        return `can't find any two sum equal target`;
+    }
 }
 
 console.log(twoSum([2, 7, 11, 15], 9));
