@@ -5,7 +5,7 @@ router.get('/', (req, res) => {
   res.send('Hello, My Server!');
 });
 
-router.get('/getdata', (req, res) => {
+router.get('/getData', (req, res) => {
   const data = req.query.number;
   let result = '';
   if(!data){
@@ -20,6 +20,25 @@ router.get('/getdata', (req, res) => {
     result =sum;
   }
     res.send(result.toString());
+});
+
+router.get('/myName', (req, res) => {
+  const name = req.cookies.username;
+  if(name){
+    res.send(name);
+  }else{
+    res.redirect('/trackname');
+  }
+});
+
+router.get('/trackname', (req, res) => {
+  const name = req.query.name;
+  if(name){
+    res.cookie('username', name);
+    res.redirect(`/myName`);
+  }else{
+    res.render('trackname');
+  }
 });
 
 module.exports = router;  

@@ -1,14 +1,8 @@
-doctype html
-html(lang="en")
-  head
-    title MyApp
-    //- link(rel='stylesheet', href='/static/stylesheets/style.css')
-  body
-    header 
-    //使任何值都可以從這加入
-    h1= error.message 
-    h2= error.status 
-    pre= error.stack
+extends layout.pug
+
+block content
+  h1= error.message 
+  h2= error.status 
+  pre= error.stack
     
-    footer 
      
