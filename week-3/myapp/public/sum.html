@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sum</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+      <label>Please enter a number:</label>
+      <input type="text" name="number" />
+      <button type="submit">Submit</button>
+      <p id="output"></p>
+
+    <script>
+        $(document).ready(function() {
+            $("button").click(function (event) {
+            event.preventDefault();     // 阻止表單的默認提交行為
+            var data = $('input[name=number]').val(); 
+                $.ajax({
+                    data: {number: data},
+                    url: "/getdata",
+                    type: "GET",
+                    success: function (response) {
+                        $("#output").text(response);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("AJAX request failed:", status, error);
+                    }
+                });
+            });
+        });
+      
+    </script>
+  </body>
+</html>
