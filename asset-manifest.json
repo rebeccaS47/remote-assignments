@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/remote-assignments/week-4/my-first-app/static/css/main.31756c46.css",
+    "main.js": "/remote-assignments/week-4/my-first-app/static/js/main.d2733c33.js",
+    "static/js/453.cc8ea52e.chunk.js": "/remote-assignments/week-4/my-first-app/static/js/453.cc8ea52e.chunk.js",
+    "index.html": "/remote-assignments/week-4/my-first-app/index.html",
+    "main.31756c46.css.map": "/remote-assignments/week-4/my-first-app/static/css/main.31756c46.css.map",
+    "main.d2733c33.js.map": "/remote-assignments/week-4/my-first-app/static/js/main.d2733c33.js.map",
+    "453.cc8ea52e.chunk.js.map": "/remote-assignments/week-4/my-first-app/static/js/453.cc8ea52e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31756c46.css",
+    "static/js/main.d2733c33.js"
+  ]
+}
